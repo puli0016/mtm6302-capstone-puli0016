@@ -1,0 +1,227 @@
+:root {
+    --primary-color: #00365D;
+    --secondary-color:#FFD700;
+    --thirth-color: #1E1E2E;
+    --background-light-color-1: #3FA9F5;
+    --background-dark-color-2: #6B47DC;
+    --text-button-color: #ECEEF2;
+    --text-titles-color: #B0C4DE;
+    --text-p-color: black;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color:#1E1E2E    ;
+    color: #1E1E2E;
+    font-family: Roboto Condensed bold;
+}
+
+/* -------------------- Close Home Custom ------------------------------ */
+.home {
+    background: url(../images/bg1.jpg);
+    background-size: cover;
+    padding: 16rem 0;
+    color: #1E1E2E;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    opacity: 80%;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    margin-left: 3rem;
+    color: #1E1E2E;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.input-container {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    background-color: #1E1E2E;
+    border: solid #6B47DC;
+    color: #ECEEF2;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+}
+
+.date-input {
+    background-color: #B0C4DE;
+    color: #00365D;
+    border: solid #6B47DC;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.date-input::placeholder {
+    color: #707070;
+}
+
+label{
+    font-size: 1.5rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;    
+}
+
+.open-button {
+    background-color: #1E1E2E;
+    border: solid #3FA9F5;
+    color: #3FA9F5;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.favorites {
+    background-color: #1E1E2E;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #ECEEF2;
+    justify-content: center;
+    align-items: center;
+}
+
+.material-symbols-outlined {
+    margin-right: 0.5rem;
+    color: #FFD700;
+}
+
+/* -------------------- Close Home Custom ------------------------------ */
+
+/* -------------------- Picture of the day Custom ------------------------------------ */
+.picture {
+    background: url(../images/bg2.jpg);
+    background-size: cover;
+    padding: 3rem 0;
+    color: #1E1E2E;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    opacity: 80%;
+}
+
+.title-2{
+    color: #ECEEF2;
+    font-size: 3rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+}
+
+.picture-day{
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: solid #FFD700;
+}
+
+.Copyright{
+    text-align: center;
+    font-size: 1rem;
+    color: #ECEEF2;
+}
+
+.description{
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    background-color: #00365D;
+    opacity: 80%;
+    color: #ECEEF2;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+}
+
+/* -------------------- close Picture of the day Custom ------------------------------ */
+
+
+/* -------------------- My Favorites Custom ------------------------------------ */
+
+.my-favorites{
+    background: url(../images/bg3.jpg);
+}
+
+.title-3{
+    color: #ECEEF2;
+    font-size: 3rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    margin: 3rem;
+    margin-bottom: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+  
+.grid-item {
+    border: 1px solid #FFD700;
+}
+  
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+  
+
+/* -------------------- close My Favorites Custom ------------------------------ */
+
+
+/* Responsive styles */
+
+@media (max-width: 767px) {
+   .container {
+        padding: 2rem;
+    }
+   .title {
+        font-size: 2rem;
+    }
+   .input-container {
+        flex-direction: row;
+        align-items: center;
+    }
+   .date-input {
+        width: 100%;
+        margin-bottom: 0;
+    }
+   .open-button {
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+   .container {
+        padding: 1rem;
+    }
+   .title {
+        font-size: 1.5rem;
+    }
+   .input-container {
+        flex-direction: column;
+    }
+   .date-input {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+   .open-button {
+        margin-left: 0;
+    }
+}
