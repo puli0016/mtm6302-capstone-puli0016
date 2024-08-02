@@ -20,7 +20,7 @@ async function fetchData() {
 // Function to display the Astronomy Picture of the Day (APOD) data
 function displayApod(data) {
     // Set the image source to the APOD URL
-    document.getElementById('picture-day').src = data.url
+    document.getElementById('pictureday').src = data.url
     
     // Set the text content for the title, date, and explanation
     document.getElementById('title-2').textContent = data.title
