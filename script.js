@@ -18,7 +18,7 @@ document.querySelector('.open-button').addEventListener('click', () => {
         });
 });
 
-document.getElementById('save').addEventListener('click', () => {
+document.getElementById('add').addEventListener('click', () => {
     const pictureData = {
         url: document.getElementById('pictureday').src,
         title: document.getElementById('title-2').innerText,
@@ -48,6 +48,13 @@ document.getElementById('view-favorites').addEventListener('click', () => {
     document.getElementById('picture-section').style.display = 'none';
     document.getElementById('favorites-section').style.display = 'block';
 });
+
+document.getElementById('clear-favorites').addEventListener('click', () => {
+    localStorage.removeItem('favorites');
+    alert('Favorites have been cleared!');
+    document.getElementById('favorites-container').innerHTML = '';
+});
+
 
 document.getElementById('go-home').addEventListener('click', () => {
     document.getElementById('home-section').style.display = 'block';

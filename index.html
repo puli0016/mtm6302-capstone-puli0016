@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Home Section -->
+    <!-- Home -->
     <div id="home-section" class="home">
         <h1 class="title">NASA Astronomy Picture of the Day</h1>
         <div class="input-container">
@@ -22,24 +22,27 @@
         </div>
     </div>
 
-    <!-- Picture of the Day Section -->
+    <!-- Picture of the Day -->
     <div id="picture-section" class="picture" style="display: none;">
         <img id="pictureday" src="" alt="Astronomy Picture of the Day">
         <h1 id="title-2"></h1>
         <p class="Copyright" id="date"></p>
         <div class="description" id="explanation"></div>
-        <div>
+        <div style="display: flex; justify-content: center; margin-top: 1rem;">
             <button class="btn btn-primary" id="add">Add Favorites</button>
         </div>
     </div>
 
-    <!-- Favorites Section -->
+    <!-- Favorites -->
     <div id="favorites-section" class="my-favorites" style="display: none;">
         <h1 class="title-3">My Favorites</h1>
         <div id="favorites-container" class="grid-container"></div>
+        <div style="display: flex; justify-content: center; margin-top: 1rem;">
+            <button id="clear-favorites" class="btn btn-outline-primary">Clear Favorites</button>
+        </div>
     </div>
 
-    <!-- Footer -->
+
     <footer>
         <div class="favorites">
             <span class="material-symbols-outlined">photo_camera</span>
