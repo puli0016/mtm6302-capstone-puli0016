@@ -1,34 +1,56 @@
-async function fetchData() {
-    try {
-      // Fetch data from the NASA API using a demo API key
-      const response = await fetch('https://api.nasa.gov/planetary/apod?api_key=BDZjDGpr1SVgzsvTYHWvezu98BeQyO7GYN6H4iAY&date=2021-01-01')
-      
-      // Parse the JSON response
-      const data = await response.json()
-      
-      // Log the data to the console
-      console.log(data)
-      
-      // Display the APOD data
-      displayApod(data)
-    } catch (error) {
-      // Handle any errors that occur
-      console.error('An unexpected error occurred:', error)
-    }
-}
-  
-// Function to display the Astronomy Picture of the Day (APOD) data
-function displayApod(data) {
-    // Set the image source to the APOD URL
-    document.getElementById('pictureday').src = data.url
-    
-    // Set the text content for the title, date, and explanation
-    document.getElementById('title-2').textContent = data.title
-    document.getElementById('date').textContent = new Date(data.date).toLocaleDateString()
-    document.querySelector('.description').innerHTML = data.explanation
-}
-  
-// Call the fetchData function to initiate the process
-window.onload = function() {
-    fetchData()
-}
+const apiKey = 'BDZjDGpr1SVgzsvTYHWvezu98BeQyO7GYN6H4iAY'; 
+
+document.querySelector('.open-button').addEventListener('click', () => {
+    const selectedDate = document.getElementById('date-input').value;
+    const url = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${selectedDate}`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('pictureday').src = data.url;
+            document.getElementById('title-2').innerText = data.title;
+            document.getElementById('date').innerText = data.date;
+            document.getElementById('explanation').innerText = data.explanation;
+
+            // Hide home section and show picture section
+            document.getElementById('home-section').style.display = 'none';
+            document.getElementById('picture-section').style.display = 'block';
+        });
+});
+
+document.getElementById('save').addEventListener('click', () => {
+    const pictureData = {
+        url: document.getElementById('pictureday').src,
+        title: document.getElementById('title-2').innerText,
+        date: document.getElementById('date').innerText,
+        explanation: document.getElementById('explanation').innerText,
+    };
+
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    favorites.push(pictureData);
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+});
+
+document.getElementById('view-favorites').addEventListener('click', () => {
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const container = document.getElementById('favorites-container');
+    container.innerHTML = '';
+
+    favorites.forEach(favorite => {
+        const div = document.createElement('div');
+        div.classList.add('grid-item');
+        div.innerHTML = `<img src="${favorite.url}" alt="${favorite.title}"><p>${favorite.title}</p><p>${favorite.date}</p><p>${favorite.explanation}</p>`;
+        container.appendChild(div);
+    });
+
+    // Hide other sections and show favorites section
+    document.getElementById('home-section').style.display = 'none';
+    document.getElementById('picture-section').style.display = 'none';
+    document.getElementById('favorites-section').style.display = 'block';
+});
+
+document.getElementById('go-home').addEventListener('click', () => {
+    document.getElementById('home-section').style.display = 'block';
+    document.getElementById('picture-section').style.display = 'none';
+    document.getElementById('favorites-section').style.display = 'none';
+});

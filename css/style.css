@@ -1,6 +1,6 @@
 :root {
     --primary-color: #00365D;
-    --secondary-color:#FFD700;
+    --secondary-color: #FFD700;
     --thirth-color: #1E1E2E;
     --background-light-color-1: #3FA9F5;
     --background-dark-color-2: #6B47DC;
@@ -12,29 +12,27 @@
 body {
     margin: 0;
     padding: 0;
-    background-color:#1E1E2E    ;
-    color: #1E1E2E;
-    font-family: Roboto Condensed bold;
+    background-color: var(--thirth-color);
+    color: var(--text-p-color);
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
-/* -------------------- Close Home Custom ------------------------------ */
+/* Home Section */
 .home {
-    background: url(../images/bg1.jpg);
+    background: url('../images/bg1.jpg');
     background-size: cover;
     padding: 16rem 0;
-    color: #1E1E2E;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--thirth-color);
+    font-family: 'Roboto Condensed', sans-serif;
     font-weight: bold;
-    opacity: 80%;
+    opacity: 0.8;
 }
 
 .title {
     font-size: 3rem;
     margin-bottom: 2rem;
     margin-left: 3rem;
-    color: #1E1E2E;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
+    color: var(--thirth-color);
 }
 
 .input-container {
@@ -45,17 +43,17 @@ body {
     align-items: center;
     justify-content: center;
     margin-bottom: 1rem;
-    background-color: #1E1E2E;
-    border: solid #6B47DC;
-    color: #ECEEF2;
+    background-color: var(--thirth-color);
+    border: solid var(--background-dark-color-2);
+    color: var(--text-button-color);
     padding: 1rem 2rem;
     border-radius: 20px;
 }
 
 .date-input {
-    background-color: #B0C4DE;
-    color: #00365D;
-    border: solid #6B47DC;
+    background-color: var(--text-titles-color);
+    color: var(--primary-color);
+    border: solid var(--background-dark-color-2);
     font-size: 1.5rem;
     padding: 1rem 2rem;
     border-radius: 5px;
@@ -66,15 +64,15 @@ body {
     color: #707070;
 }
 
-label{
+label {
     font-size: 1.5rem;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;    
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .open-button {
-    background-color: #1E1E2E;
-    border: solid #3FA9F5;
-    color: #3FA9F5;
+    background-color: var(--thirth-color);
+    border: solid var(--background-light-color-1);
+    color: var(--background-light-color-1);
     font-size: 1rem;
     padding: 0.5rem 1rem;
     border-radius: 5px;
@@ -82,39 +80,36 @@ label{
 }
 
 .favorites {
-    background-color: #1E1E2E;
+    background-color: var(--thirth-color);
     display: flex;
     align-items: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #ECEEF2;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: var(--text-button-color);
     justify-content: center;
     align-items: center;
 }
 
 .material-symbols-outlined {
     margin-right: 0.5rem;
-    color: #FFD700;
+    color: var(--secondary-color);
 }
 
-/* -------------------- Close Home Custom ------------------------------ */
-
-/* -------------------- Picture of the day Custom ------------------------------------ */
+/* Picture of the Day Section */
 .picture {
-    background: url(../images/bg2.jpg);
+    background: url('../images/bg2.jpg');
     background-size: cover;
     padding: 3rem 0;
-    color: #1E1E2E;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--thirth-color);
+    font-family: 'Roboto Condensed', sans-serif;
     font-weight: bold;
-    opacity: 80%;
+    opacity: 0.8;
 }
 
 #title-2 {
-    color: #ECEEF2;
+    color: var(--text-button-color);
     font-size: 3rem;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
 }
 
@@ -122,19 +117,17 @@ label{
     display: block;
     margin: 0 auto;
     border-radius: 20px;
-    border: solid #FFD700;
+    border: solid var(--secondary-color);
     width: 50%;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-.Copyright{
+.Copyright {
     text-align: center;
     font-size: 1rem;
-    color: #ECEEF2;
+    color: var(--text-button-color);
 }
 
-.description{
+.description {
     max-width: 1100px;
     margin: 0 auto;
     display: flex;
@@ -142,9 +135,9 @@ label{
     align-items: center;
     justify-content: center;
     margin-bottom: 1rem;
-    background-color: #00365D;
-    opacity: 80%;
-    color: #ECEEF2;
+    background-color: var(--primary-color);
+    opacity: 0.8;
+    color: var(--text-button-color);
     padding: 1rem 2rem;
     border-radius: 20px;
 }
@@ -154,110 +147,71 @@ label{
     margin: 40px auto;
     text-align: center;
 }
-  
-/* #picture {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-  
-#title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-  
-#date {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 10px;
-}
-  
-#explanation {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 20px;
-}  */
 
-
-/* -------------------- close Picture of the day Custom ------------------------------ */
-
-
-/* -------------------- My Favorites Custom ------------------------------------ */
-
-.my-favorites{
-    background: url(../images/bg3.jpg);
+/* My Favorites Section */
+.my-favorites {
+    background: url('../images/bg3.jpg');
 }
 
-.title-3{
-    color: #ECEEF2;
+.title-3 {
+    color: var(--text-button-color);
     font-size: 3rem;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
 }
 
 .grid-container {
     display: grid;
     margin: 3rem;
-    margin-bottom: 3rem;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
-  
+
 .grid-item {
-    border: 1px solid #FFD700;
+    border: 1px solid var(--secondary-color);
 }
-  
+
 .grid-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-  
-  
 
-/* -------------------- close My Favorites Custom ------------------------------ */
-
-
-/* Responsive styles */
-
+/* Responsive Styles */
 @media (max-width: 767px) {
-   .container {
+    .container {
         padding: 2rem;
     }
-   .title {
+    .title {
         font-size: 2rem;
     }
-   .input-container {
+    .input-container {
         flex-direction: row;
         align-items: center;
     }
-   .date-input {
+    .date-input {
         width: 100%;
         margin-bottom: 0;
     }
-   .open-button {
+    .open-button {
         margin-left: 1rem;
     }
 }
 
 @media (max-width: 480px) {
-   .container {
+    .container {
         padding: 1rem;
     }
-   .title {
+    .title {
         font-size: 1.5rem;
     }
-   .input-container {
+    .input-container {
         flex-direction: column;
     }
-   .date-input {
+    .date-input {
         width: 100%;
         margin-bottom: 1rem;
     }
-   .open-button {
+    .open-button {
         margin-left: 0;
     }
 }
